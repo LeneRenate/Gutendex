@@ -1,8 +1,12 @@
 // import { useState } from "react";
-import "./App.css";
 
-function App() {
-  return <></>;
+import { fetchAllBooks } from "./api/axiosGutendex";
+
+async function App() {
+  return await fetchAllBooks();
+  // <>
+  //   <h1>GutenDex</h1>
+  // </>
 }
 
 export default App;
