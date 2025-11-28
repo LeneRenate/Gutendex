@@ -1,7 +1,7 @@
 // import { useState } from "react";
 
 function App() {
-  return <h1>GutenDex</h1>;
+  return <></>;
 }
 
 export default App;

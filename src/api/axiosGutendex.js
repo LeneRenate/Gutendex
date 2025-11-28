@@ -4,13 +4,19 @@ const BASE_URL = "https://gutendex.com/books";
 
 const fetchAllBooks = async () => {
   const res = await axios.get(BASE_URL);
-  console.log(res.results);
+  console.log(res.data);
 };
+
+// fetchAllBooks();
 
 const fetchBookById = async (id) => {
   const res = await axios.get(`${BASE_URL}/${id}`);
-  return res.title;
+  const bookData = res.data;
+  console.log(bookData);
+  return bookData;
 };
+
+// fetchBookById(100);
 
 // Make more general?
 const fetchBookByCategory = async (category) => {
