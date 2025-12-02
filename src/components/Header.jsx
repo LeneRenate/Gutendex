@@ -10,7 +10,7 @@ export default function Header() {
         {/* Logo + title */}
         <div className="flex flex-row justify-start">
           <img
-            src="../assets/TextBooks_colour"
+            src="..src/assets/TextBooks_colours.png"
             alt="Colourful books on a shelf"
           />
           <h2>GUTENDEX</h2>
@@ -22,7 +22,7 @@ export default function Header() {
         {/* Favourites navigation */}
         <nav aria-label="Favourite Books">
           <Link to="/favourites">
-            <img src="" alt="❤️" />
+            <img src="../assets/Heart.png" alt="❤️" />
           </Link>
         </nav>
       </div>

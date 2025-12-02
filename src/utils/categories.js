@@ -13,7 +13,7 @@ import tragedyIcon from "../assets/categories/tragedy.png";
 import warIcon from "../assets/categories/war.png";
 import philosophyIcon from "../assets/categories/philosophy.png";
 
-export const CATEGORIES = [
+export const categories = [
   {
     id: "fiction",
     name: "Fiction",

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useFavourites } from "../context/FavouritesContext";
+import { useFavourites } from "../context/useFavourites";
 
 export default function BookCard(props) {
   const { id, image, title, authors, fullBook } = props;
