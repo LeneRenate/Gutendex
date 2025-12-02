@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { SearchBar } from "./SearchBar";
-import { CategoryList } from "./CategoryList";
+import SearchBar from "./SearchBar";
+import CategoryList from "./CategoryList";
 
 export default function Header() {
   return (
