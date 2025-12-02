@@ -6,9 +6,9 @@ export default function Header() {
   return (
     <header className="flex flex-col">
       {/* Top section: "logo"/pagetitle + search + favourites */}
-      <div className="flex flex-row">
+      <div className="flex flex-row justify-around">
         {/* Logo + title */}
-        <div className="flex flex-row">
+        <div className="flex flex-row justify-start">
           <img
             src="../assets/TextBooks_colour"
             alt="Colourful books on a shelf"
