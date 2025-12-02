@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import { useFavourites } from "../../context/FavouritesContext";
+import { useFavourites } from "../context/FavouritesContext";
 
 export default function BookCard(props) {
   const { id, image, title, authors, fullBook } = props;
-  const { addToFavourites } = useFavourites();
+  const { toggleFavourite, isFavourite } = useFavourites();
 
   return (
     <article className="bookCard">
@@ -16,8 +16,8 @@ export default function BookCard(props) {
             : "Unknown author"}
         </p>
       </Link>
-      <button onClick={() => addToFavourites(fullBook)}>
-        Add to favourites ❤️
+      <button onClick={() => toggleFavourite(fullBook)}>
+        {isFavourite(id) ? "Remove from favourites 🤍" : "Add to favourites ❤️"}
       </button>
     </article>
   );
