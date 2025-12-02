@@ -1,3 +1,3 @@
 export default function Header() {
-  return <></>;
+  return <header className="flex flex-col"></header>;
 }
