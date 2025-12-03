@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import styles from "../styles/SearchBar.module.css";
 
 export default function SearchBar() {
   const [query, setQuery] = useState();
@@ -14,12 +15,15 @@ export default function SearchBar() {
   };
 
   return (
-    <form onSubmit={handleSearch}>
+    <form className={styles.searchForm} onSubmit={handleSearch}>
       <input
+        className={styles.searchInput}
         placeholder="Search books by title, author, theme.."
         value={query}
       />
-      <button type="submit">Search</button>
+      <button className={styles.searchBtn} type="submit">
+        Search
+      </button>
     </form>
   );
 }

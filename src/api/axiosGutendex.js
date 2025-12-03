@@ -10,4 +10,4 @@ const fetchBookById = (id) => {
   axios.get(`${BASE_URL}/${id}`);
 };
 
-export { fetchBooks, fetchBookById };
+export { BASE_URL, fetchBooks, fetchBookById };

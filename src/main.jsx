@@ -7,10 +7,8 @@ import App from "../src/App.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router}>
-      <FavouritesProvider>
-        <App />
-      </FavouritesProvider>
-    </RouterProvider>
+    <FavouritesProvider>
+      <RouterProvider router={router} />
+    </FavouritesProvider>
   </StrictMode>
 );

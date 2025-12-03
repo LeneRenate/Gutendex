@@ -2,7 +2,7 @@ import { useFavourites } from "../context/useFavourites";
 import BookCard from "../components/BookCard";
 
 export default function FavouritesPage() {
-  const { favourites } = useFavourites;
+  const { favourites } = useFavourites();
 
   return (
     <section>

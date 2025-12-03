@@ -9,7 +9,7 @@ export default function CategoryList() {
         <Link
           className={`${styles.catCard} flex flex-col items-center`}
           key={cat.name}
-          to={`/category/${cat.name}`}
+          to={`category/${cat.name}`}
         >
           <img className={styles.catIcon} src={cat.icon} />
           <p className={styles.catName}>{cat.name}</p>

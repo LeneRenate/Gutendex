@@ -7,7 +7,7 @@ export default function BookCard(props) {
 
   return (
     <article className="bookCard">
-      <Link to={`/book/${id}`}>
+      <Link to={`book/${id}`}>
         <img src={image} alt={title} />
         <h3>{title}</h3>
         <p>

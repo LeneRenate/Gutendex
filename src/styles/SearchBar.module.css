@@ -1,0 +1,15 @@
+.searchForm {
+  border-radius: 20px;
+}
+
+.searchInput {
+  width: 300px;
+  border-radius: 20px 0 0 20px;
+  padding: 0.5rem;
+}
+
+.searchBtn {
+  background-color: lightskyblue;
+  border-radius: 0 20px 20px 0;
+  padding: 0.5rem 0.75rem 0.5rem 0.2rem;
+}

@@ -1,5 +1,5 @@
 .wholeHeader {
-  background-color: white;
+  background-color: hotpink;
 }
 
 .topSection {
@@ -8,6 +8,10 @@
 
 .logo {
   gap: 0.5rem;
+}
+
+.logo:hover {
+  cursor: pointer;
 }
 
 .headIcon {
