@@ -6,7 +6,11 @@ export default function CategoryList() {
   return (
     <div className={`${styles.catList} flex flex-row justify-around`}>
       {categories.map((cat) => (
-        <Link key={cat.name} to={`/category/${cat.name}`}>
+        <Link
+          className={`${styles.catCard} flex flex-col items-center`}
+          key={cat.name}
+          to={`/category/${cat.name}`}
+        >
           <img className={styles.catIcon} src={cat.icon} />
           <p className={styles.catName}>{cat.name}</p>
         </Link>
