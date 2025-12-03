@@ -1,23 +1,26 @@
 import { Link } from "react-router-dom";
 import { useFavourites } from "../context/useFavourites";
 
-export default function BookCard(props) {
-  const { id, image, title, authors, fullBook } = props;
+export default function BookCard(book) {
   const { toggleFavourite, isFavourite } = useFavourites();
+
+  const bookCover = book.formats["image/jpeg"];
 
   return (
     <article className="bookCard">
-      <Link to={`book/${id}`}>
-        <img src={image} alt={title} />
-        <h3>{title}</h3>
+      <Link to={`book/${book.id}`}>
+        <img src={bookCover} alt={book.title} />
+        <h3>{book.title}</h3>
         <p>
-          {authors && authors.length > 0
-            ? authors.map((a) => a.name).join(" ,")
+          {book.authors && book.authors.length > 0
+            ? book.authors.map((a) => a.name).join(" ,")
             : "Unknown author"}
         </p>
       </Link>
-      <button onClick={() => toggleFavourite(fullBook)}>
-        {isFavourite(id) ? "Remove from favourites 🤍" : "Add to favourites ❤️"}
+      <button onClick={() => toggleFavourite(book)}>
+        {isFavourite(book.id)
+          ? "Remove from favourites 🤍"
+          : "Add to favourites ❤️"}
       </button>
     </article>
   );

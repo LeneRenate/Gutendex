@@ -14,6 +14,10 @@ export default function BookDetailsPage() {
 
   if (!book) return <p>Loading...</p>;
 
+  const bookCover = book.formats["image/jpeg"];
+
+  const summary = book.summaries?.[0] || "No summary available";
+
   const ebookLink =
     book.formats["text/html"] ||
     book.formats["application/pdf"] ||
@@ -22,7 +26,7 @@ export default function BookDetailsPage() {
   return (
     <section className="flex flex-row">
       <div className="flex flex-col">
-        <img src={book.img} alt={book.title} />
+        <img src={bookCover} alt={book.title} />
 
         <button onClick={() => toggleFavourite(book)}>
           {isFavourite(id)
@@ -56,6 +60,10 @@ export default function BookDetailsPage() {
           </div>
         )}
       </div>
+      <article>
+        <h4>Summary:</h4>
+        <p>{summary}</p>
+      </article>
     </section>
   );
 }
