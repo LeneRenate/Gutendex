@@ -3,17 +3,6 @@ import { useParams } from "react-router-dom";
 import { fetchBookById } from "../api/axiosGutendex";
 import { useFavourites } from "../context/useFavourites";
 
-/** 
-Boktittel
-Coverbilde
-Forfatter
-Antall nedlastninger
-Kategori
-Språk
-Lenke til boka i digitalt format
-En knapp for "Legg til i Favoritter"
-**/
-
 export default function BookDetailsPage() {
   const { id } = useParams();
   const [book, setBook] = useState(null);

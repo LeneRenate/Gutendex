@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import SearchBar from "./SearchBar";
 import CategoryList from "./CategoryList";
+import bookIcon from "../assets/TextBooks_colours.png";
+import heartIcon from "../assets/Heart.png";
 
 export default function Header() {
   return (
@@ -9,10 +11,7 @@ export default function Header() {
       <div className="flex flex-row justify-around">
         {/* Logo + title */}
         <div className="flex flex-row justify-start">
-          <img
-            src="..src/assets/TextBooks_colours.png"
-            alt="Colourful books on a shelf"
-          />
+          <img src={bookIcon} alt="Colourful books on a shelf" />
           <h2>GUTENDEX</h2>
         </div>
 
@@ -22,7 +21,7 @@ export default function Header() {
         {/* Favourites navigation */}
         <nav aria-label="Favourite Books">
           <Link to="/favourites">
-            <img src="../assets/Heart.png" alt="❤️" />
+            <img src={heartIcon} alt="❤️" />
           </Link>
         </nav>
       </div>
