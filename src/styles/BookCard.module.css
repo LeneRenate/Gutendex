@@ -1,0 +1,26 @@
+.bookCard {
+  background-color: white;
+  border-radius: 10px;
+  max-width: 200px;
+  padding: 0.5rem;
+  margin: 2rem;
+}
+
+.bcImg {
+  width: 150px;
+  height: auto;
+}
+
+.bcTitle {
+  font-family: just another hand, sans-serif;
+}
+
+.bcAuthors {
+  font-family: delius, sans-serif;
+}
+
+.bcFavBtn {
+  font-family: delius, sans-serif;
+  background-color: blue;
+  color: white;
+}

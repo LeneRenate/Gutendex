@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import axios from "axios";
-import { BASE_URL } from "../api/axiosGutendex";
+import { fetchBooksByCategory } from "../api/axiosGutendex";
 import BookCard from "../components/BookCard";
+import { capitalize } from "../utils/capitalize";
 
 export default function CategoryPage() {
   const { category } = useParams();
@@ -11,18 +11,29 @@ export default function CategoryPage() {
   useEffect(() => {
     if (!category) return;
 
-    axios
-      .get(`${BASE_URL}?topic=${category}`)
-      .then((res) => setBooks(res.data.results))
+    fetchBooksByCategory(category)
+      .then((res) => setBooks(res))
       .catch((err) => console.log(err));
   }, [category]);
 
+  const catName = capitalize(category);
+  const numberOfBooks = books.length;
+
   return (
     <section>
-      <h2>{category} books:</h2>
+      <h2>
+        {catName} books ({numberOfBooks})
+      </h2>
       <div className="flex flex-row flex-wrap">
         {books.map((b) => (
-          <BookCard key={b.id} book={b} />
+          <BookCard
+            key={b.id}
+            id={b.id}
+            image={b.formats["image/jpeg"] || "../assets/NoBookCover.png"}
+            title={b.title}
+            authors={b.authors}
+            fullBook={b}
+          />
         ))}
       </div>
     </section>

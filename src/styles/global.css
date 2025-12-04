@@ -1,3 +1,17 @@
+:root {
+  --primaryCol: #b07c99;
+  --secCol: #4f1645;
+  --bgCol: #ede7eb;
+  --contrastG: #a8b8a8;
+  --contrastB: #a6b5e1;
+  --highlight: #bcc6cc;
+  --lightTxt: #fff;
+  --darkTxt: #270b22;
+  --headerTxt: just another hand, sans-serif;
+  --secTxt: delius, sans-serif;
+  --bodyTxt: calibri, sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;

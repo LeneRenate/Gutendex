@@ -8,8 +8,8 @@ export default function CategoryList() {
       {categories.map((cat) => (
         <Link
           className={`${styles.catCard} flex flex-col items-center`}
-          key={cat.name}
-          to={`category/${cat.name}`}
+          key={cat.id}
+          to={`category/${cat.apiQuery}`}
         >
           <img className={styles.catIcon} src={cat.icon} />
           <p className={styles.catName}>{cat.name}</p>
