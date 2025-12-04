@@ -38,7 +38,9 @@ export default function Header() {
             className={`${styles.favBtn} flex flex-row items-end`}
           >
             <img src={heartIcon} alt="❤️" className={styles.favIcon} />
-            <p className={styles.favText}>My favourite books</p>
+            <p className={`text-center ${styles.favText}`}>
+              My favourite books
+            </p>
           </Link>
         </nav>
       </div>

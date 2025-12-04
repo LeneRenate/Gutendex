@@ -1,5 +1,6 @@
 .wholeHeader {
-  background-color: hotpink;
+  background-color: var(--primaryCol);
+  border-bottom: 2px solid var(--contrastG);
 }
 
 .topSection {
@@ -19,14 +20,26 @@
 }
 
 .title {
-  font-family: just another hand, sans-serif;
+  font-family: var(--headerTxt);
   font-size: 2.5rem;
+  color: var(--darkTxt);
+}
+
+.title::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 2.5px;
+  background-color: var(--contrastG);
 }
 
 .favBtn {
-  border: 1.25px solid black;
+  border: 1.75px solid var(--contrastG);
   border-radius: 15px;
   padding: 0.5rem;
+  width: 175px;
+
+  background-color: var(--contrastB);
 }
 
 .favIcon {
@@ -35,5 +48,7 @@
 }
 
 .favText {
+  font-family: var(--secTxt);
+  color: var(--darkTxt);
   padding-bottom: 0.25rem;
 }

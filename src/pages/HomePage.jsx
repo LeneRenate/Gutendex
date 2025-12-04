@@ -1,10 +1,5 @@
-import Footer from "../components/Footer";
-import Header from "../components/Header";
+import backgroundImg from "../assets/bgHome.png";
 
 export default function HomePage() {
-  return (
-    <>
-      <h1 className="homePage">Your literary adventure starts here!</h1>
-    </>
-  );
+  return <img src={backgroundImg} />;
 }

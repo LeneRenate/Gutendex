@@ -1,0 +1,4 @@
+.wholeFooter {
+  background-color: var(--primaryCol);
+  border-top: 2px solid var(--contrastG);
+}

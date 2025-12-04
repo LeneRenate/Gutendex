@@ -3,11 +3,11 @@
 }
 
 .catCard {
-  background-color: cyan;
+  background-color: var(--contrastB);
   width: 6.25%;
-  border: 1.25px solid white;
+  border: 1.75px solid var(--contrastG);
   border-radius: 20px;
-  padding: 0.75rem;
+  padding: 0.75rem 0.75rem 0;
 }
 
 /* .catIcon {
@@ -15,5 +15,8 @@
 } */
 
 .catName {
-  font-size: 0.9rem;
+  font-family: var(--headerTxt);
+  font-size: 1.5rem;
+  letter-spacing: 2%;
+  color: var(--darkTxt);
 }
