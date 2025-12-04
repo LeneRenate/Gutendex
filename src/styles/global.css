@@ -22,3 +22,7 @@ body {
   max-width: 100%;
   background-color: aquamarine;
 }
+
+section {
+  width: 95%;
+}

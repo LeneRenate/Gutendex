@@ -10,12 +10,14 @@ export default function BookCard(props) {
     <article className={`flex flex-col items-center ${styles.bookCard}`}>
       <Link to={`books/${id}`} className={`flex flex-col items-center`}>
         <img src={image} alt={title} className={`${styles.bcImg}`} />
-        <h3 className={styles.bcTitle}>{title}</h3>
-        <p className={styles.bcAuthors}>
-          {authors && authors.length > 0
-            ? authors.map((a) => a.name).join(" ,")
-            : "Unknown author"}
-        </p>
+        <div className="flex flex-col justify-start">
+          <h3 className={styles.bcTitle}>{title}</h3>
+          <p className={styles.bcAuthors}>
+            {authors && authors.length > 0
+              ? authors.map((a) => a.name).join(" ,")
+              : "Unknown author"}
+          </p>
+        </div>
       </Link>
       <button
         onClick={() => toggleFavourite(fullBook)}
