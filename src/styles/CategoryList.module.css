@@ -8,15 +8,17 @@
   border: 1.75px solid var(--contrastG);
   border-radius: 20px;
   padding: 0.75rem 0.75rem 0;
+  box-shadow: var(--cardShadow);
 }
 
-/* .catIcon {
-  width: 48px;
-} */
+.catIcon {
+  width: 60%;
+  height: auto;
+}
 
 .catName {
   font-family: var(--headerTxt);
-  font-size: 1.5rem;
-  letter-spacing: 2%;
+  font-size: 1.75rem;
+  letter-spacing: 2.5%;
   color: var(--darkTxt);
 }

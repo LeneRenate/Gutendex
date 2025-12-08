@@ -4,6 +4,7 @@ import { fetchBooks, fetchFromUrl } from "../api/axiosGutendex";
 import BookCard from "../components/BookCard";
 import Pagination from "../components/Pagination";
 import { capitalize } from "../utils/capitalize";
+import styles from "../styles/BookDisplay.module.css";
 
 export default function CategoryPage() {
   const { category } = useParams();
@@ -28,13 +29,13 @@ export default function CategoryPage() {
 
   return (
     <>
-      <section>
-        <h2>
-          {capitalize(category)} books ({apiResponse.count}):
+      <section className={`${styles.bookDisplay}`}>
+        <h2 className={`${styles.displayHeadline}`}>
+          Books about: {capitalize(category)} ({apiResponse.count}):
         </h2>
-        <ul className="flex flex-row flex-wrap">
+        <ul className="flex flex-row flex-wrap justify-start">
           {apiResponse.results.map((b) => (
-            <li>
+            <li className={`${styles.listEl}`}>
               <BookCard
                 key={b.id}
                 id={b.id}

@@ -10,6 +10,7 @@
   --headerTxt: just another hand, sans-serif;
   --secTxt: delius, sans-serif;
   --bodyTxt: calibri, sans-serif;
+  --cardShadow: 5px 5px 10px rgba(65, 65, 65, 0.6);
 }
 
 * {
@@ -20,9 +21,5 @@
 
 body {
   max-width: 100%;
-  background-color: aquamarine;
-}
-
-section {
-  width: 95%;
+  background-color: var(--bgCol);
 }

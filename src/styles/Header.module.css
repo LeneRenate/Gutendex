@@ -38,17 +38,17 @@
   border-radius: 15px;
   padding: 0.5rem;
   width: 175px;
-
   background-color: var(--contrastB);
+  box-shadow: var(--cardShadow);
 }
 
 .favIcon {
-  height: 48px;
+  height: 2.25rem;
   width: auto;
 }
 
 .favText {
   font-family: var(--secTxt);
   color: var(--darkTxt);
-  padding-bottom: 0.25rem;
+  line-height: 100%;
 }

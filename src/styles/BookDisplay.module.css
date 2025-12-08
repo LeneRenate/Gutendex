@@ -1,0 +1,15 @@
+.bookDisplay {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.displayHeadline {
+  font-family: var(--headerTxt);
+  font-size: 2.5rem;
+  padding: 2rem 2rem 0.5rem;
+}
+
+.listEl {
+  max-width: 17%;
+  margin: 1rem;
+}

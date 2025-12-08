@@ -2,6 +2,7 @@
   font-family: var(--secTxt);
   border-radius: 20px;
   border: 1.75px solid var(--secCol);
+  box-shadow: var(--cardShadow);
 }
 
 .searchInput {

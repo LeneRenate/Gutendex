@@ -1,29 +1,46 @@
 .bookCard {
-  width: 15%;
-  background-color: white;
+  width: 100%;
+  background-color: var(--contrastG);
   border-radius: 10px;
   padding: 0.5rem;
-  margin: 1.5rem;
+  box-shadow: var(--cardShadow);
 }
 
 .bcImg {
-  width: 100%;
+  width: 95%;
+  border-radius: 2px;
 }
 
 .bcTitle {
-  font-family: just another hand, sans-serif;
+  font-family: var(--secTxt);
+  height: 3rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* show max 2 lines */
+  line-clamp: 2; /* standard property for compatibility */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .bcAuthors {
   font-family: var(--secTxt);
   font-size: 0.87rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1; /* show max 2 lines */
+  line-clamp: 1; /* standard property for compatibility */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0.5rem;
 }
 
 .bcFavBtn {
   width: 80%;
-  padding: 5px auto;
+  padding: 0.5rem auto;
   font-family: var(--secTxt);
-  background-color: blue;
+  background-color: var(--secCol);
   color: white;
   border-radius: 10px;
 }

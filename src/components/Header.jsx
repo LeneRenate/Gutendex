@@ -35,7 +35,7 @@ export default function Header() {
         <nav aria-label="Favourite Books">
           <Link
             to="/Gutendex/favourites"
-            className={`${styles.favBtn} flex flex-row items-end`}
+            className={`${styles.favBtn} flex flex-row`}
           >
             <img src={heartIcon} alt="❤️" className={styles.favIcon} />
             <p className={`text-center ${styles.favText}`}>
