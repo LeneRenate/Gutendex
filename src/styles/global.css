@@ -22,4 +22,13 @@
 body {
   max-width: 100%;
   background-color: var(--bgCol);
+  font-family: var(--bodyTxt);
+  font-size: 1rem;
+  color: var(--darkTxt);
+}
+
+.loading {
+  font-family: var(--headerTxt);
+  font-size: 3rem;
+  margin: 7.5% auto auto 10%;
 }

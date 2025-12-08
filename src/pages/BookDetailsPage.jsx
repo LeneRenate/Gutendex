@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchBookById } from "../api/axiosGutendex";
 import { useFavourites } from "../context/useFavourites";
+import styles from "../styles/BookDetails.module.css";
 
 export default function BookDetailsPage() {
   const { id } = useParams();
@@ -12,7 +13,7 @@ export default function BookDetailsPage() {
     fetchBookById(id).then(setBook);
   }, [id]);
 
-  if (!book) return <p>Loading...</p>;
+  if (!book) return <p className="loading">Loading...</p>;
 
   const bookCover = book.formats["image/jpeg"];
 
@@ -24,46 +25,65 @@ export default function BookDetailsPage() {
     book.formats["text/plain"];
 
   return (
-    <section className="flex flex-row">
-      <div className="flex flex-col">
-        <img src={bookCover} alt={book.title} />
+    <section className={`flex flex-row p-6 ${styles.wholePage}`}>
+      <div
+        className={`w-1/3 flex flex-col items-center gap-y-8 m-4 p-6 ${styles.detailCols}`}
+      >
+        <img src={bookCover} alt={book.title} className={styles.bookCover} />
 
-        <button onClick={() => toggleFavourite(book)}>
+        <button
+          onClick={() => toggleFavourite(book)}
+          className={`w-4/5 text-center py-4 ${styles.detailBtns}`}
+        >
           {isFavourite(id)
             ? "Remove from favourites 🤍"
             : "Add to favourites ❤️"}
         </button>
 
         {ebookLink && (
-          <button>
+          <button className={`w-4/5 text-center py-4 ${styles.detailBtns}`}>
             <a href={ebookLink} target="_blank" rel="noopener noreferrer">
-              Read / Download
+              Read / Download 📖
             </a>
           </button>
         )}
       </div>
 
-      <div className="flex flex-col">
-        <h1>{book.title}</h1>
-        <h2>by: {book.authors?.map((a) => a.name).join(", ")}</h2>
-        <p>Downloads: {book.download_count}</p>
-        <p>Language: {book.languages.join(", ")}</p>
+      <div
+        className={`w-2/3 flex flex-col gap-y-4 m-4  p-10 pt-6 ${styles.detailCols}`}
+      >
+        <h1 className={styles.bdTitle}>{book.title}</h1>
+        <h2 className={styles.bdAuthor}>
+          by: {book.authors?.map((a) => a.name).join(", ")}
+        </h2>
+
+        <span className={styles.divider} />
+
+        <p className={styles.plainTxt}>Downloads: {book.download_count}</p>
+        <p className={styles.plainTxt}>Language: {book.languages.join(", ")}</p>
+
+        <span className={styles.divider} />
 
         {book.subjects && book.subjects.length > 0 && (
-          <div className="flex flex-row flex-wrap">
+          <div className={styles.subList}>
             <h4>Subjects:</h4>
-            <ul>
+            <ul className={`flex flex-row flex-wrap gap-3`}>
               {book.subjects.map((subject, index) => (
-                <li key={index}>{subject}</li>
+                <li key={index} className={`p-2`}>
+                  🔹{subject}
+                </li>
               ))}
             </ul>
           </div>
         )}
+
+        <span className={styles.divider} />
+
+        <article>
+          <h4 className={styles.sumHeading}>Summary:</h4>
+          <p className={styles.sumTxt}>{summary}</p>
+        </article>
       </div>
-      <article>
-        <h4>Summary:</h4>
-        <p>{summary}</p>
-      </article>
     </section>
   );
 }

@@ -1,0 +1,61 @@
+.wholePage {
+  width: 100%;
+  /* background-color: var(--secCol); */
+  /* border-top: 2px solid var(--contrastG); */
+  background-color: var(--contrastG);
+}
+
+.detailCols {
+  border: 1.75px solid var(--secCol);
+  border-radius: 10px;
+  background-color: var(--bgCol);
+  box-shadow: var(--cardShadow);
+}
+
+.bookCover {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: var(--cardShadow);
+}
+
+.detailBtns {
+  border-radius: 10px;
+  font-family: var(--secTxt);
+  background-color: var(--secCol);
+  color: var(--lightTxt);
+  box-shadow: var(--cardShadow);
+}
+
+.bdTitle {
+  font-family: var(--headerTxt);
+  font-size: 3rem;
+}
+
+.bdAuthor {
+  font-family: var(--secTxt);
+  font-size: 1.5rem;
+}
+
+.divider {
+  width: 60%;
+  border-bottom: 1px solid var(--darkTxt);
+}
+
+.plainTxt {
+  font-size: 1.1rem;
+}
+
+.subList {
+  margin-bottom: 0.5rem;
+}
+
+.sumHeading {
+  margin-top: 0.5rem;
+  font-family: var(--secTxt);
+  font-size: 1.25rem;
+}
+
+.sumTxt {
+  padding-left: 1rem;
+}

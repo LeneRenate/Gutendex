@@ -35,9 +35,8 @@ export default function CategoryPage() {
         </h2>
         <ul className="flex flex-row flex-wrap justify-start">
           {apiResponse.results.map((b) => (
-            <li className={`${styles.listEl}`}>
+            <li key={b.id} className={`${styles.cardDisplay}`}>
               <BookCard
-                key={b.id}
                 id={b.id}
                 image={b.formats["image/jpeg"] || "../assets/NoBookCover.png"}
                 title={b.title}

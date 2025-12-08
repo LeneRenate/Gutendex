@@ -7,12 +7,21 @@ export default function Pagination({
   onPageChange,
 }) {
   return (
-    <div className={styles.pageControl}>
+    <div className={` ${styles.pageCtrl}`}>
       {previous && (
-        <button onClick={() => onPageChange(previous)}>Previous page</button>
+        <button
+          onClick={() => onPageChange(previous)}
+          className={styles.prevBtn}
+        >
+          Previous page
+        </button>
       )}
       <span className={styles.pageIndicator}>Page {currentPage}</span>
-      {next && <button onClick={() => onPageChange(next)}>Next page</button>}
+      {next && (
+        <button onClick={() => onPageChange(next)} className={styles.nextBtn}>
+          Next page
+        </button>
+      )}
     </div>
   );
 }

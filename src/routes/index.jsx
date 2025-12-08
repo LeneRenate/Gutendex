@@ -14,7 +14,7 @@ export const router = createBrowserRouter([
     children: [
       { index: true, element: <HomePage /> },
       { path: "category/:category", element: <CategoryPage /> },
-      { path: "book/:id", element: <BookDetailsPage /> },
+      { path: "books/:id", element: <BookDetailsPage /> },
       { path: "favourites", element: <FavouritesPage /> },
       { path: "search", element: <SearchResultsPage /> },
       { path: "*", element: <h1>404 not found</h1> },

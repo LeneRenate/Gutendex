@@ -4,13 +4,13 @@ const BASE_URL = "https://gutendex.com/books";
 
 const fetchBooks = async (params = {}) => {
   const res = await axios.get(BASE_URL, { params });
-  console.log(`fetchBooks: ${res.data}`);
+  // console.log(`fetchBooks: ${res.data}`);
   return res.data;
 };
 
 const fetchBookById = async (id) => {
   const res = await axios.get(`${BASE_URL}/${id}`);
-  console.log(`fetchBooksById: ${res.data}`);
+  // console.log(`fetchBooksById: ${res.data}`);
   return res.data;
 };
 

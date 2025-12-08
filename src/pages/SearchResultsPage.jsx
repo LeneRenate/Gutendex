@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import BookCard from "../components/BookCard";
 import { fetchBooks, fetchFromUrl } from "../api/axiosGutendex";
 import Pagination from "../components/Pagination";
+import styles from "../styles/BookDisplay.module.css";
 
 export default function SearchResultsPage() {
   const [apiResponse, setApiResponse] = useState(null);
@@ -25,28 +26,31 @@ export default function SearchResultsPage() {
   if (!apiResponse) return <p className="loading">Loading...</p>;
 
   return (
-    <section>
-      <h2>
-        Search results for "{query}" ({apiResponse.count}):
-      </h2>
-      <div className="flex flex-row flex-wrap">
-        {apiResponse.results.map((b) => (
-          <BookCard
-            key={b.id}
-            id={b.id}
-            image={b.formats["image/jpeg"] || "../assets/NoBookCover.png"}
-            title={b.title}
-            authors={b.authors}
-            fullBook={b}
-          />
-        ))}
-      </div>
+    <>
+      <section>
+        <h2>
+          Search results for "{query}" ({apiResponse.count}):
+        </h2>
+        <ul className="flex flex-row flex-wrap justify-start">
+          {apiResponse.results.map((b) => (
+            <li key={b.id} className={`${styles.cardDisplay}`}>
+              <BookCard
+                id={b.id}
+                image={b.formats["image/jpeg"] || "../assets/NoBookCover.png"}
+                title={b.title}
+                authors={b.authors}
+                fullBook={b}
+              />
+            </li>
+          ))}
+        </ul>
+      </section>
       <Pagination
         previous={apiResponse.previous}
         next={apiResponse.next}
-        currentPage={page}
+        currentPageurrentPage={page}
         onPageChange={goToPage}
       />
-    </section>
+    </>
   );
 }

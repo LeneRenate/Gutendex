@@ -15,10 +15,17 @@ export default function BookCard(props) {
     <article
       className={`flex flex-col items-center ${styles.bookCard}`}
       title={title}
+      onClick={() => {
+        console.log(`id: ${id}`);
+      }}
     >
-      <Link to={`books/${id}`} className={`flex flex-col items-center`}>
-        <img src={image} alt={title} className={`${styles.bcImg}`} />
-        <div className="flex flex-col items-start">
+      <Link to={`../books/${id}`} className={`flex flex-col items-center`}>
+        <div
+          className={`flex flex-col justify-center items-center ${styles.imgWrapper}`}
+        >
+          <img src={image} alt={title} className={`${styles.bcImg}`} />
+        </div>
+        <div className="w-full flex flex-col">
           <h3 className={styles.bcTitle}>{title}</h3>
           <p className={styles.bcAuthors} title={author}>
             {author}
@@ -29,7 +36,13 @@ export default function BookCard(props) {
         onClick={() => toggleFavourite(fullBook)}
         className={styles.bcFavBtn}
       >
-        {isFavourite(id) ? "Remove from favourites 🤍" : "Add to favourites ❤️"}
+        {isFavourite(id) ? (
+          "Remove from favourites 🤍"
+        ) : (
+          <>
+            Add to <br /> favourites ❤️
+          </>
+        )}
       </button>
     </article>
   );

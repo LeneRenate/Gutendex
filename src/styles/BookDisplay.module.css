@@ -1,6 +1,6 @@
 .bookDisplay {
   width: 95%;
-  margin: 0 auto;
+  margin: 0 auto 1.75rem;
 }
 
 .displayHeadline {
@@ -9,7 +9,7 @@
   padding: 2rem 2rem 0.5rem;
 }
 
-.listEl {
+.cardDisplay {
   max-width: 17%;
   margin: 1rem;
 }
