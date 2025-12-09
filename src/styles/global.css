@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 :root {
   --primaryCol: #b07c99;
   --secCol: #4f1645;
