@@ -11,7 +11,7 @@ export default function CategoryList() {
           key={cat.id}
           to={`category/${cat.apiQuery}`}
         >
-          <img className={styles.catIcon} src={cat.icon} />
+          <img className={styles.catIcon} src={cat.icon} alt={cat.name} />
           <p className={styles.catName}>{cat.name}</p>
         </Link>
       ))}
