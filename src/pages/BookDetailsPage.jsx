@@ -25,15 +25,15 @@ export default function BookDetailsPage() {
     book.formats["text/plain"];
 
   return (
-    <section className={`flex flex-row p-6 ${styles.wholePage}`}>
+    <section className={`flex flex-row justify-evenly ${styles.wholePage}`}>
       <div
-        className={`w-1/3 flex flex-col items-center gap-y-8 m-4 p-6 ${styles.detailCols}`}
+        className={`w-1/4 flex flex-col items-center gap-y-8 ${styles.firstCol}`}
       >
         <img src={bookCover} alt={book.title} className={styles.bookCover} />
 
         <button
           onClick={() => toggleFavourite(book)}
-          className={`w-4/5 text-center py-4 ${styles.detailBtns}`}
+          className={`w-4/5 h-12 text-center ${styles.detailBtns}`}
         >
           {isFavourite(id)
             ? "Remove from favourites 🤍"
@@ -41,7 +41,7 @@ export default function BookDetailsPage() {
         </button>
 
         {ebookLink && (
-          <button className={`w-4/5 text-center py-4 ${styles.detailBtns}`}>
+          <button className={`w-4/5 h-12 text-center ${styles.detailBtns}`}>
             <a href={ebookLink} target="_blank" rel="noopener noreferrer">
               Read / Download 📖
             </a>
@@ -49,9 +49,7 @@ export default function BookDetailsPage() {
         )}
       </div>
 
-      <div
-        className={`w-2/3 flex flex-col gap-y-4 m-4  p-10 pt-6 ${styles.detailCols}`}
-      >
+      <div className={`w-2/3 flex flex-col gap-y-4 ${styles.secondCol}`}>
         <h1 className={styles.bdTitle}>{book.title}</h1>
         <h2 className={styles.bdAuthor}>
           by: {book.authors?.map((a) => a.name).join(", ")}

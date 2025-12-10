@@ -3,13 +3,15 @@
   /* background-color: var(--secCol); */
   /* border-top: 2px solid var(--contrastG); */
   background-color: var(--contrastG);
+  padding: 2rem 0;
 }
 
-.detailCols {
+.firstCol {
   border: 1.75px solid var(--secCol);
   border-radius: 10px;
   background-color: var(--bgCol);
   box-shadow: var(--cardShadow);
+  padding: 0.5rem;
 }
 
 .bookCover {
@@ -17,6 +19,7 @@
   height: auto;
   border-radius: 5px;
   box-shadow: var(--cardShadow);
+  margin-bottom: 1rem;
 }
 
 .detailBtns {
@@ -25,6 +28,14 @@
   background-color: var(--secCol);
   color: var(--lightTxt);
   box-shadow: var(--cardShadow);
+}
+
+.secondCol {
+  border: 1.75px solid var(--secCol);
+  border-radius: 10px;
+  background-color: var(--bgCol);
+  box-shadow: var(--cardShadow);
+  padding: 1rem 3rem 2rem 2rem;
 }
 
 .bdTitle {

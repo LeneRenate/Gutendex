@@ -9,6 +9,7 @@
   width: 300px;
   border-radius: 20px 0 0 20px;
   padding: 0.5rem;
+  background-color: white;
 }
 
 .searchInput:focus {
