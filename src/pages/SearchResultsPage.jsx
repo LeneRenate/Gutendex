@@ -28,7 +28,7 @@ export default function SearchResultsPage() {
   return (
     <>
       <section>
-        <h2>
+        <h2 className={`${styles.displayHeadline}`}>
           Search results for "{query}" ({apiResponse.count}):
         </h2>
         <ul className="flex flex-row flex-wrap justify-start">

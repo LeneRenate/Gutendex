@@ -7,12 +7,14 @@ export default function CategoryList() {
     <div className={`${styles.catList} flex flex-row justify-around`}>
       {categories.map((cat) => (
         <Link
-          className={`${styles.catCard} flex flex-col items-center`}
+          className={`${styles.catCard} flex flex-col`}
           key={cat.id}
           to={`category/${cat.apiQuery}`}
         >
-          <img className={styles.catIcon} src={cat.icon} alt={cat.name} />
-          <p className={styles.catName}>{cat.name}</p>
+          <li className={`${styles.listEl} flex flex-col items-center`}>
+            <img className={styles.catIcon} src={cat.icon} alt={cat.name} />
+            <p className={styles.catName}>{cat.name}</p>
+          </li>
         </Link>
       ))}
     </div>

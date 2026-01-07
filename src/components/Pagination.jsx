@@ -13,7 +13,7 @@ export default function Pagination({
           onClick={() => onPageChange(previous)}
           className={styles.prevBtn}
         >
-          Previous page
+          Prev. page
         </button>
       )}
       <span className={styles.pageIndicator}>Page {currentPage}</span>

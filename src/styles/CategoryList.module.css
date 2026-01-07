@@ -11,6 +11,11 @@
   box-shadow: var(--cardShadow);
 }
 
+.listEl {
+  list-style-type: none;
+  width: 100%;
+}
+
 .catIcon {
   width: 75%;
   height: auto;
@@ -21,4 +26,57 @@
   font-size: 1.75rem;
   letter-spacing: 2.5%;
   color: var(--darkTxt);
+}
+
+/* Mobile, small */
+@media screen and (min-width: 375px) {
+}
+
+/* Mobile, large */
+@media screen and (min-width: 425px) {
+  .catCard {
+    padding: 0.25rem 0.25rem 0;
+    border-radius: 15px;
+  }
+  .catIcon {
+    width: 90%;
+    height: auto;
+  }
+  .catName {
+    font-size: 1rem;
+  }
+}
+
+/* Tablet, loddrett */
+@media screen and (min-width: 768px) {
+  .catCard {
+    padding: 0.25rem 0.25rem 0;
+    border-radius: 15px;
+  }
+  .catIcon {
+    width: 90%;
+    height: auto;
+  }
+  .catName {
+    font-size: 1.25rem;
+    letter-spacing: 1%;
+  }
+}
+
+/* Tablet, vannrett */
+@media screen and (min-width: 1024px) {
+  .catName {
+    font-size: 1.25rem;
+  }
+}
+
+/* Laptop, 14" */
+@media screen and (min-width: 1080px) {
+  .catName {
+    font-size: 1.5rem;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1440px) {
 }

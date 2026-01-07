@@ -29,6 +29,10 @@ body {
   color: var(--darkTxt);
 }
 
+main {
+  min-height: 500px;
+}
+
 .loading {
   font-family: var(--headerTxt);
   font-size: 3rem;
