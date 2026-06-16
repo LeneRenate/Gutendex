@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "../styles/SearchBar.module.css";
+import { Search } from "lucide-react";
 
 export default function SearchBar() {
   const [query, setQuery] = useState("");
@@ -19,16 +20,21 @@ export default function SearchBar() {
   };
 
   return (
-    <form className={styles.searchForm} onSubmit={handleSearch}>
+    <form
+      className={`flex flex-row no-wrap max-w-sm w-4/10 ${styles.searchForm}`}
+      onSubmit={handleSearch}
+    >
       <input
         type="text"
+        aria-label="Search books by title, author, theme"
+        title="Search books by title, author, theme"
         className={styles.searchInput}
         placeholder="Search books by title, author, theme.."
         onChange={(e) => setQuery(e.target.value)}
         value={query}
       />
       <button className={styles.searchBtn} type="submit">
-        Search
+        <Search />
       </button>
     </form>
   );

@@ -6,6 +6,7 @@ import styles from "../styles/BookDetails.module.css";
 
 export default function BookDetailsPage() {
   const { id } = useParams();
+  console.log("id: ", id);
   const [book, setBook] = useState(null);
   const { toggleFavourite, isFavourite } = useFavourites();
 
