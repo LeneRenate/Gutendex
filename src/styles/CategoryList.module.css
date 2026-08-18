@@ -5,9 +5,9 @@
 .catCard {
   background-color: var(--contrastB);
   width: 6.25%;
-  border: 1.75px solid var(--contrastG);
+  padding: 0.75rem 0.75rem 0.25rem;
+  border: 2.25px solid var(--contrastG);
   border-radius: 20px;
-  padding: 0.75rem 0.75rem 0;
   box-shadow: var(--cardShadow);
 }
 
@@ -17,7 +17,8 @@
 }
 
 .catIcon {
-  width: 75%;
+  width: 60%;
+  max-width: 60px;
   height: auto;
 }
 
@@ -35,7 +36,6 @@
 /* Mobile, large */
 @media screen and (min-width: 425px) {
   .catCard {
-    padding: 0.25rem 0.25rem 0;
     border-radius: 15px;
   }
   .catIcon {
@@ -50,7 +50,6 @@
 /* Tablet, loddrett */
 @media screen and (min-width: 768px) {
   .catCard {
-    padding: 0.25rem 0.25rem 0;
     border-radius: 15px;
   }
   .catIcon {
@@ -79,4 +78,10 @@
 
 /* Desktop */
 @media screen and (min-width: 1440px) {
+  .catCard {
+    width: 6%;
+  }
+  .catName {
+    font-size: 2rem;
+  }
 }

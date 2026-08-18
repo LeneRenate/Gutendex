@@ -13,7 +13,7 @@ export default function Header() {
     <header className={`${styles.wholeHeader} flex flex-col`}>
       {/* Top section: "logo"/pagetitle + search + favourites */}
       <div
-        className={`${styles.topSection} flex flex-row justify-around items-center`}
+        className={`${styles.topSection} flex flex-row justify-between items-center`}
       >
         {/* Logo + title */}
         <div
